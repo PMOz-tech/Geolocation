@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Location</title>
+</head>
+<body>
+<div id="ip">loading.......</div>
+<div id="city">loading.......</div>
+<div id="region">loading.......</div>
+<div id="country">loading.......</div>
+<div id="location">loading.......</div>
+<div id="org">loading.......</div>
+</body>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+    $.get('https://ipinfo.io?token=7dc19c79be6b5a', function(response){
+            $("#ip").html('IP: <b>'+response.ip+' </b>');
+            $("#city").html('City: <b>'+response.city+' </b>');
+            $("#region").html('Region: <b>'+response.region+' </b>');
+            $("#country").html('Country: <b>'+response.country+' </b>');
+            $("#location").html('Location: <b>'+response.loc+' </b>');
+            $("#org").html('Org: <b>'+response.org+' </b>');
+            }, 'jsonp');
+
+
+
+</script>
+</html>
